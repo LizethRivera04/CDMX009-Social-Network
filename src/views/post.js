@@ -13,11 +13,7 @@ export function renderPostView() {
       <input id="title" class="input is-success" type="text" placeholder="Título">
       <textarea id="body" class="textarea is-success is-large" type="text" placeholder="Escribe acá tu cuento"></textarea>
       <div class="field is-horizontal">
-        <label class="label has-text-white">Autor:</label>
-      <div class="field-body">
-        <input class="input is-static has-text-white" type="text" value="User.name" readonly>
-        </div>
-    
+        
         <div class="file is-primary is-centered">
           <label class="file-label">
             <input id="file" class="file-input" type="file" accept = "image/*" name="resume">
@@ -96,7 +92,7 @@ function readFile(fileInput, sectionPosts) {
           photo: userData.photo,//photoURL
           date: new Date(),
           img: url,
-          uid: userData.uid
+          //uid: userData.uid
         }
         addNewPost(post)
           .then(res => {
@@ -106,11 +102,8 @@ function readFile(fileInput, sectionPosts) {
             console.log("No hay nuevo post", err)
           })
         addPostBD(post)
-
       })
-
     });
-
   }
 
 }
