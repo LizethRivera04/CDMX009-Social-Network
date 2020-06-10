@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/90e469c395.js" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+
 </head>
+
 <body>
-  <script type="module" src="index.js"></script>
+
+  <div id="root"></div>
+  <div id="showP"></div>
+  <nav class="navbar is-fixed-bottom is-hoverable is-primary navBottom" id="navBar" role="navigation"
+    aria-label="main navigation">
+    <div class="navbar-brand">
+      <a href="#/Home" id="home" class="navbar-item is-expanded is-primary centerItem"><i class="fas fa-home"></i></a>
+      <a href="#/Post" id="post" class="navbar-item is-expanded is-primary centerItem"><i
+          class="fas fa-plus-circle"></i></a>
+      <a href="#/My_profile" id="profile" class="navbar-item is-expanded centerItem"><i class="fas fa-user"></i></a>
+      <a href="#/Exit" id="exit" class="navbar-item is-expanded centerItem"><i class="fas fa-power-off"></i></a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="active" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script> -->
+  <!-- include only the Firebase features as you need -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/firebase/7.14.0/firebase-messaging.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-storage.js"></script> -->
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries
+   <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>  -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase.js"></script>
+
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCBWMiBIM_0KMxQgbZZarPb4R_htLsd9UE",
+      authDomain: "socialnetwork-15a5f.firebaseapp.com",
+      databaseURL: "https://socialnetwork-15a5f.firebaseio.com",
+      projectId: "socialnetwork-15a5f",
+      storageBucket: "socialnetwork-15a5f.appspot.com",
+      messagingSenderId: "863801306874",
+      appId: "1:863801306874:web:c6631f9d9d65117d44a343",
+      measurementId: "G-YSFLLZDYTT"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    //firebase.analytics();
+  </script>
+  <script type="module" src="main.js"></script>
+  <!-- <script src="pops.js"></script> -->
 </body>
+
 </html>
