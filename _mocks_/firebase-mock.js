@@ -13,7 +13,7 @@
     }
 } */
 //Creando un mock manual
-/* const firebase = {
+const firebase = {
     auth: () => {
         return {
             signInWithPopup: (provider) => {
@@ -31,4 +31,4 @@
 
 export default jest.fn(() => {
     return firebase
-}) */
+}) 

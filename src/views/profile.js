@@ -111,6 +111,10 @@ export function renderProfileView(myData) {
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-half">
+      <div class= "centerItem">
+                <button class = "button is-rounded btnIcon  is-outlined is-primary" id="editProfile" >
+                <span class="icon is-small"><i class="fas fa-pencil-alt"></i></span></button>
+            </div>
           <div class="profile">
             <div id="changeImage">
               <figure class='image container is-128x128'>
@@ -119,7 +123,11 @@ export function renderProfileView(myData) {
             </div>
             <div class= "centerItem">   
             <div id="photoProfile">
+            <div class="inputFile">
+            <label for="file" id="labelFile" class="ocultEditProfile label "><i class="far fa-image" title="Upload"></i></label>
             <input class = "ocultEditProfile fileInput" type="file" accept="image/*" id="file">
+            </div>
+            
             </div>
             </div>
             <h1 class="title has-text-centered has-text-grey-lighter title is-8" id="nameProfile">
@@ -131,10 +139,7 @@ export function renderProfileView(myData) {
             </h2>
  
             <div class= "centerItem" id="interest">${myData.interests}</div>
-            <div class= "centerItem">
-                <button class = "button is-rounded btnIcon  is-outlined is-primary" id="editProfile" >
-                <span class="icon is-small"><i class="fas fa-pencil-alt"></i></span></button>
-            </div>
+            
             <div class= "centerItem">
               <textarea class = "textarea is-primary ocultEditProfile subtitle is-6" rows="2" placeholder="***Bio*** / ¿De qué forma participarás? ¿Eres escritor?, ¿Ilustrador? o Ambos"  id="interestsProfile" maxlength="200">${myData.interests}</textarea>
             </div>
@@ -230,6 +235,7 @@ function edit() {
 
   function editProfile() {
     let file = document.querySelector('#file')
+    let labelFile = document.querySelector('#labelFile')
     let nameProfile = document.querySelector('#nameProfile').contentEditable = 'true'
     let emailProfile = document.querySelector('#emailProfile').contentEditable = 'true'
     let prevImage = document.querySelector('#changeImage')
@@ -240,7 +246,7 @@ function edit() {
     //console.log(text.innerHTML)
     btnSaveProfile.classList.add('active');
     textareaInterest.classList.add('active');
-    file.classList.add('active')
+    labelFile.classList.add('active')
   }
 
   function readFile(file, photoProfile, prevImage) {
@@ -293,7 +299,7 @@ function edit() {
 
     btnSaveProfile.classList.remove('active');
     textareaInterest.classList.remove('active');
-    file.classList.remove('active');
+    labelFile.classList.remove('active');
     if (btnSaveProfile.classList != 'active') {
       nameProfile.contentEditable = 'false'
       emailProfile.contentEditable = 'false'

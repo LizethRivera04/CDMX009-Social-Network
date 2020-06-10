@@ -23,9 +23,9 @@ const postButton = document.querySelector('#post');
 const profileButton = document.querySelector('#profile');
 const exitButton = document.querySelector('#exit');
 
-homeButton.addEventListener('click', renderHomeView);
+homeButton.addEventListener('click', renderPostView);
 //homeButton.addEventListener('click', showPosts);
-postButton.addEventListener('click', renderPostView);
+postButton.addEventListener('click', renderHomeView);
 profileButton.addEventListener('click', userObserverProfile);
 exitButton.addEventListener('click', signoutUser);
 
